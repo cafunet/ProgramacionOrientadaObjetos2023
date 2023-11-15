@@ -2,16 +2,11 @@ package edu.caldas.ingenieria.poo.animalinheritanche;
 
 public class dog extends animal{
 
-	public dog(String nombre, String raza, int edad) {
-		super(nombre, raza, edad);
-	}
-
-	public void hacerSonido(){
-		System.out.println(getNombre() + "Guau!");	
-	}
+	private int weight; 
+	private String haircolor; 
 	
-	public void olfatear(){
-		System.out.println(getNombre() + "El perro esta olfateando!");		
+	public dog(String name, String raza, int edad) {
+		super(name, raza, edad);
 	}
 	
 	public int getWeight() {
@@ -30,25 +25,12 @@ public class dog extends animal{
 		this.haircolor = haircolor;
 	}
 
-	private int weight; 
-	private String haircolor; 
-	
-
-	
-	public void pesonormal() {
-		
+	public void hacerSonido(){
+		System.out.println(getName() + " Esta ladrando, Guau! Guau!");	
 	}
 	
-	public void sobrepeso() {
-		
-	}
-	
-	public void uncolor() {
-		
-	}
-
-	public void mascolores() {
-	
+	public void olfatear(){
+		System.out.println(getName() + " Esta olfateando!");
 	}
 	
 }

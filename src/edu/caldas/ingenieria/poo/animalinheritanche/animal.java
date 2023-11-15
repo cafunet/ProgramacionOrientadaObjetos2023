@@ -2,26 +2,22 @@ package edu.caldas.ingenieria.poo.animalinheritanche;
 
 public class animal {
 	
-	private String nombre;
+	private String name;
 	private String raza;
 	private int edad;
 	
-	public animal(String nombre, String raza, int edad) {
-		this.nombre = nombre;
+	public animal(String name, String raza, int edad) {
+		this.name = name;
 		this.raza = raza;
 		this.edad = edad;				
 	}
-	
-	public void hacerSonido(){
-		System.out.println("hacer un sonido");		
+
+	public String getName() {
+		return name;
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getRaza() {
@@ -40,5 +36,11 @@ public class animal {
 		this.edad = edad;
 	}
 
+	public void hacerSonido(){
+		System.out.println("hacer un sonido");		
+	}
 	
+	public void olfatear(){
+		System.out.println("El animal esta olfateando!");	
+	}
 }

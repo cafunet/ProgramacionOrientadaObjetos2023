@@ -4,12 +4,16 @@ public class cat extends animal{
 	
 	private int placa;
 	
-	public cat(String nombre, String raza, int edad) {
-		super(nombre, raza, edad);
+	public cat(String name, String raza, int edad) {
+		super(name, raza, edad);
 	}
-
+	
 	public void hacerSonido(){
-		System.out.println(getNombre() + "Miau!");		
+		System.out.println(getName() + " Miau!");		
+	}
+	
+	public void olfatear(){
+		System.out.println(getName() + " El gato esta olfateando!");
 	}
 	
 	public int getPlaca() {
@@ -20,10 +24,4 @@ public class cat extends animal{
 		this.placa = placa;
 	}
 	
-	public void propietario() {	
-	}
-	
-	public void nopropietario() {
-		
-	}
 }
