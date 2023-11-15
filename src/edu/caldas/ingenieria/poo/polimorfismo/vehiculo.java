@@ -41,4 +41,10 @@ public class vehiculo {
 		this.kilometrosRecorridos = kilometrosRecorridos;
 	}
 	
+	public static void salir() {
+		System.out.println("ha salido del programa =D");
+	}
+
+
 }
+	

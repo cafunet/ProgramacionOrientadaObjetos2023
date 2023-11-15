@@ -1,45 +1,62 @@
 package edu.caldas.ingenieria.poo.polimorfismo;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Scanner sc = new Scanner(System.in);
-		
+	public static Scanner keyboard = new Scanner(System.in);
+    public static PrintStream screen = System.out;
+	
+	public static void main(String[] args) {		
+	
 		carro mazda = new carro("Mazda", "1998", 100);
-		bicicleta gw = new bicicleta("GW", "2015", 30);
-		bicicleta cross = new bicicleta("Cross", "2020", 70);
+		bicicleta gw = new bicicleta("GW", "2015", 30);		
 		
+        double result = 0;
+		int opcion = 8;
 		
-		gw.andarBicicleta();
-		gw.picarBicicleta();
-		System.out.println("la bicicleta " + gw.marca + " ando " + gw.kilometrosRecorridos);
-		
-		cross.andarBicicleta();
-		cross.picarBicicleta();
-		System.out.println("la bicicleta " + cross.marca + " ando " + cross.kilometrosRecorridos);
-		
-		
-		vehiculo vehiculos[] = new vehiculo[3];
-		vehiculos[0]=gw;
-		vehiculos[1]=mazda;
-		vehiculos[2]=cross;
-		
-		
-		
-		int opcion;
-		while(opcion != 0) {
-			if (opcion = 1 gw.andarBicicleta());
-				if (opcion) = 2
-					
-					
-			System.out.println("ingrese un numero del 1 al 8: ");
+		 while (opcion !=0){
+	            screen.println(" elija un numero del 1 al 7.Numero 8 para salir ");
+	            
+	        opcion = Integer.parseInt(keyboard.next());
 
-		}
+			switch (opcion) {
+	            case 1:
+	                gw.andarBicicleta();
+	        		System.out.println("la bicicleta " + gw.marca + " recorrio " + gw.kilometrosRecorridos + " kilometros andando");
 
+	                break;
+	            case 2:
+	                gw.picarBicicleta();
+	        		System.out.println("la bicicleta " + gw.marca + " recorrio " + gw.kilometrosRecorridos + " kilometros picando");
+	        		break;
+	            case 3:
+	                mazda.andarCarro();
+	        		System.out.println("el carro " + mazda.marca + " recorrio " + mazda.kilometrosRecorridos + " kilometros andando");
+	                break;
+	            case 4:
+	                mazda.quemarLlantaCarro();
+	        		System.out.println("el carro " + mazda.marca + " recorrio " + mazda.kilometrosRecorridos + " kilometros quemando llanta");
+	                break;
+	            case 5:
+	                screen.println(" el kilometraje de la bicicleta es: " + gw.kilometrosRecorridos + " kilometros recorridos" );
+	                break;
+	            case 6:
+	                mazda.getKilometrosRecorridos();
+	                screen.println(" el kilometraje del carro es: " + mazda.kilometrosRecorridos + " kilometros recorridos");
+	                break;
+	            case 7:
+	            	result = gw.kilometrosRecorridos + mazda.kilometrosRecorridos;
+	                screen.println(" el kilometraje total de ambos vehiculos es de: " + result + " kilometros");
+	            	break;
+	            case 8:
+	                vehiculo.salir();
+	                return;
+	        }
+	        
+	        screen.println(" el usuario escogio el numero " + opcion);
+		 }
+		 
 	}
-
 }
